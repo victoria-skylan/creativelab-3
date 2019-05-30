@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="description" content="Vue.js Hangman">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="hangman-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>word of the day</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<div id="theTop"> 
+			<h1> WORD OF THE DAY</h1>
+			<h3>an interactive site to help you expand your vocabulary</h3>
+		</div>
+			<h2>GUESS</h2>
+			<!-- canvas where hangman is drawn -->
+			<div id="board">
+				<canvas id="board-canvas"></canvas>
+			</div>
+
+			<!-- row of blank letters for the selected word -->
+			<div id="word">
+				<div class="word-blankletter" v-for="letter in wordDivs" v-cloak>{{ letter }}</div>
+			</div>
+
+			<!-- keyboard -->
+			<div id="keyboard">
+				<div v-for="row in letters" class="keyboard-row">
+					<letter-button v-for="letter in row" :letter="letter" :game-over="gameOver" :two-players="twoPlayers" :key="letter" @check="check(letter)" v-cloak></letter-button>
+				</div>
+			</div>
+			<div id="message" v> {{ message }} </div>
+
+
+			<div id="buttons">
+				<button id="playagain" class="buttons-button" :class="{ hidden: !gameOver }" @click="playAgain">Try Again</button>
+			</div>
+		
+			<div id="results">
+				<h4>Results for {{date}}</h4>
+				<h1>{{currentWord}}</h1>
+				<div class="wordInfo"><p>{{note}}</p></div>
+				<h3>Definition</h3>
+				<ul class="listInfo">
+					<li v-for="definition in definitions">
+						 {{definition}}
+					</li>
+				</ul>
+				<h3>Examples</h3>
+				<p class="listInfo" v-for="example in examples">{{example}}</p>
+			</div> 
+			
+			<div > <a href="https://github.com/victoria-skylan/creativelab-3.git" target="_blank">
+				<p> access my git hub link: https://github.com/victoria-skylan/creativelab-3.git &nbsp;
+				</p>
+				</a>
+				
+			</div>
+			<div id="header-github">
+				<a href="https://github.com/joebeachjoebeach/hangman" target="_blank">
+					<img id="header-github-img" src="./images/github.png" alt="find this project on github">
+				</a>
+			</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
