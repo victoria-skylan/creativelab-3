@@ -1,0 +1,147 @@
+/* 
+
+HANGMAN
+Table of Contents
+
+I. global element selectors
+II. helper classes applied by js
+III. the app
+	A. title bar / header
+	B. canvas
+	C. blank letters
+	D. keyboard
+	E. game-option buttons
+
+*/
+
+/* I. global element selectors */
+html, body {
+	align-items: center;
+	background-color: #F5F5F6;
+	color: #333;
+	/*display: flex;
+    flex-direction: column;*/
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+button {
+	background-color: white;
+	border: none;
+	color: #333;
+	box-shadow: 0 2px 5px #D0D0D0;
+	font-family: 'Roboto', sans-serif;
+	margin: 2px;
+}
+
+button:disabled {
+	color: #CCC;
+}
+
+/* II. helper classes applied by js */
+.hidden {
+	display: none;
+}
+
+.orange {
+	background-color: #ff9800;
+}
+
+/* III. the app and its contents */
+#app {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+	/* A. title bar / header */
+	#header {
+		align-items: center;
+		background-color: #007C91;
+		display: flex;
+		height: 40px;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+		#header-title {
+			color: white;
+			font-size: 1.75em;
+			font-weight: 300;
+			margin: 0 0 0 10px;
+		}
+
+		#header-github {
+			height: 32px;
+			margin: 0 10px 0 0;
+			width: 32px;
+		}
+
+			#header-github-img {
+				height: 100%;
+				width: 100%;
+			}
+
+	/* B. canvas container */
+	#board {
+		background-color: white;
+		box-shadow: 0 2px 5px #D0D0D0;
+		flex: 2 1 auto;
+		margin: 10px 0 0 0;
+		max-width: 700px;
+		width: 95%;
+		height: 350px;
+	}
+
+	/* C. blank letters */
+	#word {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 20px 0 18px 0;
+	}
+
+		.word-blankletter {
+			align-items: flex-end;
+			background-color: #ff9800;
+			box-shadow: 0 2px 5px #D0D0D0;
+			display: flex;
+			height: 30px;
+			justify-content: center;
+			margin: 0 2px 2px 2px;
+			width: 20px;
+		}
+
+	/* D. keyboard */
+	#keyboard {
+		align-items: center;
+		display: flex;
+		flex: 2 1 auto;
+		flex-direction: column;
+	}
+
+		.keyboard-row {
+			display: flex;
+		}
+
+			.keyboard-row-letter {
+				height: 40px;
+				width: 28px;
+			}
+
+	/* E. game-option buttons */
+	#buttons {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 5px 0;
+		max-width: 700px;
+		width: 95%;
+	}
+
+		.buttons-button {
+			height: 25px;
+			font-size: 1em;
+		}

@@ -1,0 +1,80 @@
+#app h2 {
+	color: rgba(97,138,152,1.00);
+	border: 2px solid white;
+	padding: 5px 200px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	font-size: 30px;
+}
+#message {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 20px;
+}
+#theTop {
+	background-color: rgba(97,138,152,1.00);
+	color: white;
+	width: 100%;
+	text-align: center;
+	border: solid 5px white;
+}
+#theTop h1 {
+	font-size: 5rem;
+	margin-bottom:7px;
+}
+#theTop h3 {
+	font-size: 22px;
+	border-top: 2px white solid;
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-bottom: 3em;
+	padding-top: 20px;;
+}
+#results {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-weight: 300;
+	background-color: rgba(97,138,152,0.86);
+	width: 100%;
+	border: 3px solid rgba(235,152,34,1.00);
+	/*display: none;*/
+}
+#results h1 {
+	font-size: 40px;
+	margin-bottom: 2px;
+	border-bottom: white 2px dashed;
+	padding-bottom: 5px;
+	text-align: center;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+#results h3 {
+	font-size: 35px;
+	text-align: center;
+	border: rgba(251,251,251,1.00) solid 1px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-top: 5px;
+}
+#results h4 {
+	text-align: center;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+.wordInfo {
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 10px;
+}
+.listInfo{
+	font-size: 20px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+body {
+	background:rgba(220,226,229,1.00);
+	height: 100%;
+	padding-bottom: 30px;
+}
+a {
+	color: rgba(24,88,85,1.00);	
+}
